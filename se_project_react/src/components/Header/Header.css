@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    /* width: 1360px;
+    height: 40px; */
+    padding: 32px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'CabinetGrotesk-Regular', Arial, sans-serif;
+}
+
+.header__contents{
+    display: flex;
+}
+
+.header__nav_content{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__date{
+    font-weight: 700;
+    padding: 0 0 0 24px;
+}
+
+.header__nav_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__add-clothes{
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button__add-clothes:hover{
+    opacity: .6;
+}
+
+.header__nav_avatar-name{
+    max-width: 157px;
+    max-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 12px 0 20px;
+}

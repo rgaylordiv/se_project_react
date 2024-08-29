@@ -6,7 +6,6 @@ function Header({ handleAddClick, weatherData }){
     const currentDate = new Date().toLocaleString('default', { month: 'long', day: 'numeric' });
 
     return(
-        <>
         <header className='header'>
             <div className='header__contents'>
                 <img className='header__logo' src={headerLogo} alt="App logo"/>
@@ -28,7 +27,6 @@ function Header({ handleAddClick, weatherData }){
                 </nav>
             </div>
         </header>
-        </>
     )
 }
 

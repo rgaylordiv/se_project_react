@@ -5,7 +5,6 @@ import './Main.css'
 
 function Main({ weatherData, handleCardClick }){
     return(
-        <>
         <main>
             <WeatherCard weatherData={weatherData}/>
             <section className='cards'>
@@ -23,7 +22,6 @@ function Main({ weatherData, handleCardClick }){
                 })}
             </ul>
         </main>
-        </>
     )
 }
 

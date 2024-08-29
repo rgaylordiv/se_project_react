@@ -39,40 +39,38 @@ function App() {
   }, [])
 
   return (
-    <>
-      <div className='app'>
-        <div className='app__wrapper'>
-          <Header  handleAddClick={handleAddClick} weatherData={weatherData}/>
-          <Main weatherData={weatherData} handleCardClick={handleCardClick}/>
-          <Footer />
-        </div>
-        <ModalWithForm buttonText='Add garment' title='New garment' activeModal={activeModal} closeActiveModal={closeActiveModal}>
-        <label className='modal__form-group' htmlFor='name' id='modal-name'>
-          <h2 className='modal__form-title'>Name</h2>
-          <input type='text' placeholder='Name' className='modal__form-input' name='name' id='name' required />
-          <span className='modal__input-error'></span>
-        </label>
-        <label className='modal__form-group' htmlFor='imageURL'>
-          <h2 className='modal__form-title'>Image</h2>
-          <input type="url" placeholder="Image URL" id='imageURL' className="modal__form-input modal__input_type_url" name="image" required />
-          <span className="modal__input-error" id="post-image-url-input-error"></span>
-        </label>
-        <fieldset className='modal__radio-buttons'>
-          <legend className='modal__legend'>Select the weather type:</legend>
-          <label className='modal__label modal__label_type_radio' htmlFor='hot' id='radio-button'>
-            <input type='radio' className='modal__radio-input' id='hot'/> Hot
-          </label>
-          <label className='modal__label modal__label_type_radio' htmlFor='warm' id='radio-button'>
-            <input type='radio' className='modal__radio-input' id='warm'/> Warm
-          </label>
-          <label className='modal__label modal__label_type_radio' htmlFor='cold' id='radio-button'>
-            <input type='radio' className='modal__radio-input' id='cold'/> Cold
-          </label>
-        </fieldset>
-        </ModalWithForm>
-        <ItemModal activeModal={activeModal} selectedCard={selectedCard} closeActiveModal={closeActiveModal}/>
+    <div className='app'>
+      <div className='app__wrapper'>
+        <Header  handleAddClick={handleAddClick} weatherData={weatherData}/>
+        <Main weatherData={weatherData} handleCardClick={handleCardClick}/>
+        <Footer />
       </div>
-    </>
+      <ModalWithForm buttonText='Add garment' title='New garment' activeModal={activeModal} closeActiveModal={closeActiveModal} isOpen={activeModal === "add-garment"}>
+      <label className='modal__form-group' htmlFor='name' id='modal-name'>
+        <span className='modal__form-title'>Name</span>
+        <input type='text' placeholder='Name' className='modal__form-input' name='name' id='name' required />
+        <span className='modal__input-error'></span>
+      </label>
+      <label className='modal__form-group' htmlFor='imageURL'>
+        <span className='modal__form-title'>Image</span>
+        <input type="url" placeholder="Image URL" id='imageURL' className="modal__form-input modal__input_type_url" name="image" required />
+        <span className="modal__input-error" id="post-image-url-input-error"></span>
+      </label>
+      <fieldset className='modal__radio-buttons'>
+        <legend className='modal__legend'>Select the weather type:</legend>
+        <label className='modal__label modal__label_type_radio' htmlFor='hot' id='radio-button'>
+          <input type='radio' name='weather' className='modal__radio-input' id='hot'/> Hot
+        </label>
+        <label className='modal__label modal__label_type_radio' htmlFor='warm' id='radio-button'>
+          <input type='radio' name='weather' className='modal__radio-input' id='warm'/> Warm
+        </label>
+        <label className='modal__label modal__label_type_radio' htmlFor='cold' id='radio-button'>
+          <input type='radio' name='weather' className='modal__radio-input' id='cold'/> Cold
+        </label>
+      </fieldset>
+      </ModalWithForm>
+      <ItemModal activeModal={activeModal} selectedCard={selectedCard} closeActiveModal={closeActiveModal}/>
+    </div>
   )
 }
 

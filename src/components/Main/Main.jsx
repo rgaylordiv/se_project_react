@@ -16,11 +16,11 @@ function Main({ weatherData, handleCardClick, clothingItems }){
             </section>
             <ul className='cards__list'>
                 {clothingItems.filter((item) => {
-                    return item.weather === weatherData.type;
+                    return item.weather.toLowerCase() === weatherData.type;
                 })
                 .map((item) => {
                     return (
-                        <ItemCard key={item._id} item={item} handleCardClick={handleCardClick}/>
+                        <ItemCard key={item._id} item={item} handleCardClick={handleCardClick} clothingItems={clothingItems}/>
                     )
                 })}
             </ul>

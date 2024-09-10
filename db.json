@@ -53,6 +53,18 @@
       "weather": "Hot",
       "link": "https://www.birkenstock.com/dw/image/v2/BDXC_PRD/on/demandware.static/-/Sites-master-catalog/default/dwad51bdba/151183/151183.jpg?sw=848&sh=848&strip=false",
       "_id": 19
+    },
+    {
+      "name": "Mittens",
+      "weather": "Cold",
+      "link": "https://media.istockphoto.com/id/865753528/photo/blue-mittens-on-white-wooden-background.jpg?s=612x612&w=0&k=20&c=BXKUr_Ijl3TTxTBJY80t4ZM2cs9RdCevhxHVnLJ3ldY=",
+      "_id": 20
+    },
+    {
+      "name": "Goggles",
+      "weather": "Cold",
+      "link": "https://m.media-amazon.com/images/I/710BJCqYUdL._AC_UF1000,1000_QL80_.jpg",
+      "_id": 21
     }
   ]
 }

@@ -65,6 +65,12 @@
       "weather": "Cold",
       "link": "https://m.media-amazon.com/images/I/710BJCqYUdL._AC_UF1000,1000_QL80_.jpg",
       "_id": 21
+    },
+    {
+      "name": "Beanie",
+      "weather": "Cold",
+      "link": "https://www.mrporter.com/variants/images/1647597286619923/in/w2000_q60.jpg",
+      "_id": 22
     }
   ]
 }

@@ -20,7 +20,7 @@ function WeatherCard({ weatherData }){
 
     return(
         <section className='weather-card'>
-            <p className='weather-card__temp'>{weatherData.temp[currentTemperatureUnit]}&deg;</p>
+            <p className='weather-card__temp'>{weatherData.temp[currentTemperatureUnit]}</p>
             <img src={filteredOptions?.url} alt={filteredOptions?.condition} className="weather-card__image" />
         </section>
     )

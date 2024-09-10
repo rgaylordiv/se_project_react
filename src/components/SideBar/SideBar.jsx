@@ -5,7 +5,7 @@ import avatarLogo from '../../assets/avatarLogo.svg'
 function SideBar(){
     return(
         <div className="sidebar">
-            <img className="sidebar__avatar" src={avatarLogo} alt=""/>
+            <img className="sidebar__avatar" src={avatarLogo} alt="Avatar Logo"/>
             <p className="sidebar__name">Terrance Tegegne</p>
         </div>
     )

@@ -9,7 +9,7 @@ function ModalWithForm({ children, buttonText, title, isOpen, closeActiveModal, 
                 <h1 className='modal__heading'>{title}</h1>
                 <form className='modal__form' onSubmit={onSubmit}>
                     {children}
-                    <button className="modal__button" type="submit" onClick={onSubmit}>{buttonText}</button>
+                    <button className="modal__button" type="submit">{buttonText}</button>
                 </form>
             </div>
         </div>

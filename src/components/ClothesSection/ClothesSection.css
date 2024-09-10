@@ -1,0 +1,29 @@
+/* .clothes-section{
+    
+} */
+
+.clothes-section__header{
+    display: flex;
+    margin: 47px 0 0 0;
+}
+
+.clothes-section__title{
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 19px;
+    line-height: 24.8px;
+}
+
+.clothes-section__button{
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 19px;
+    line-height: 24.8px;
+    border: none;
+    margin: 0 0 0 20px;
+    background-color: transparent;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.clothes-section__button:hover{
+    opacity: 1;
+}

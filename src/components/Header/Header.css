@@ -12,6 +12,14 @@
     display: flex;
 }
 
+.header__logo{
+    cursor: pointer;
+}
+
+.header__date{
+    cursor: default;
+}
+
 .header__nav_content{
     display: flex;
     align-items: center;
@@ -48,4 +56,23 @@
     font-size: 14px;
     font-weight: 700;
     padding: 0 12px 0 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.header__nav_avatar-name:hover{
+    opacity: .6;
+}
+
+.header__nav_avatar_logo{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header__nav_avatar_logo:hover{
+    opacity: .6;
+}
+
+.header__profile-link{
+    text-decoration: none;
 }

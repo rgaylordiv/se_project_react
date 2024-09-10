@@ -1,0 +1,14 @@
+.sidebar{
+    display: flex;
+    margin: 47px 116px 0 0;
+    width: 229px;
+    height: 59px;
+}
+
+.sidebar__name{
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 19px;
+    line-height: 24.8px;
+    align-self: center;
+    margin: 0 0 0 16px;
+}

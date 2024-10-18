@@ -44,20 +44,51 @@
     font-weight: 700;
     cursor: pointer;
     font-size: 14px;
+    padding: 0 20px 0 14px;
 }
 
 .button__add-clothes:hover{
     opacity: .6;
 }
 
-.header__nav_avatar-name{
+.header__nav_user-name{
     max-width: 157px;
     max-height: 25px;
     font-size: 14px;
     font-weight: 700;
-    padding: 0 12px 0 20px;
+    padding: 0 12px 0 0;
     cursor: pointer;
     color: #000;
+}
+
+.header__nav_register{
+    max-width: 157px;
+    max-height: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    color: #000;
+    border: none;
+    padding: 0;
+}
+
+.header__nav_register:hover{
+    opacity: .6;
+}
+
+.header__nav_login{
+    max-width: 67px;
+    max-height: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    border: none;
+}
+
+.header__nav_login:hover{
+    opacity: .6;
 }
 
 .header__nav_avatar-name:hover{
@@ -67,6 +98,8 @@
 .header__nav_avatar_logo{
     cursor: pointer;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
 .header__nav_avatar_logo:hover{

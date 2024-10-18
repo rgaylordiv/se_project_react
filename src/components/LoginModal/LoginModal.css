@@ -1,0 +1,24 @@
+.modal__form-group{
+    padding-bottom: 24px;
+}
+
+.modal__form-input{
+    padding-left: 0px;
+}
+
+.button__signup{
+    position: absolute;
+    top: 230px;
+    left: 164px;
+    height: 20px;
+    border: transparent;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.button__signup:hover{
+    opacity: .6;
+    cursor: pointer;
+}

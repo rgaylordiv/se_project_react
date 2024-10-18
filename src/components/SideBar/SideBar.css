@@ -7,8 +7,48 @@
 
 .sidebar__name{
     font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
-    font-size: 19px;
+    font-size: 20px;
     line-height: 24.8px;
     align-self: center;
     margin: 0 0 0 16px;
+    color: #000;
+}
+
+.sidebar__avatar{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar__change-button{
+    display: flex;
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 24.8px;
+    color: #000;
+    border: none;
+    background-color: #f3f3f3;
+    padding: 24px 0 0 0;
+}
+
+.sidebar__change-button:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+
+.sidebar__log-button{
+    display: flex;
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 24.8px;
+    color: #000;
+    border: none;
+    background-color: #f3f3f3;
+    padding: 8px 0 0 0;
+}
+
+.sidebar__log-button:hover{
+    cursor: pointer;
+    opacity: .6;
 }

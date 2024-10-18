@@ -15,6 +15,8 @@ export const filterWeatherData = (data) => {
     result.condition = data.weather[0].main.toLowerCase();
     result.isDay = isDay(data.sys, Date.now());
 
+    console.log('Filtered Data:', result);
+
     return result;
 }
 
@@ -23,9 +25,11 @@ const isDay = ({ sunrise, sunset }, now) => {
 }
 
 const getWeatherType = (temperature) => {
-    if (temperature >= 86) {
+    const tempValue = parseFloat(temperature); //here is where i made the changes
+    console.log(`Temperature Value: ${tempValue}`);
+    if (tempValue >= 86) {
         return 'hot';
-      } else if (temperature >= 66) {
+      } else if (tempValue >= 66) {
         return 'warm';
       } else {
         return 'cold';

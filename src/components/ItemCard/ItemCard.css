@@ -27,3 +27,10 @@
     border-radius: 10%;
     border: solid #000000 1px;
 }
+
+.item-card__button{
+    position: absolute;
+    background-image: url('../../assets/likeButton.svg');
+    border: none;
+    margin-top: 10px;
+}

@@ -55,14 +55,14 @@ function AddItemModal({ isOpen, closeActiveModal, onAddItem, activeModal }){
           <fieldset className='modal__radio-buttons'>
             <legend className='modal__legend'>Select the weather type:</legend>
             <label className='modal__label modal__label_type_radio' htmlFor='hot' id='radio-button'>
-              <input type='radio' name='weather' className='modal__radio-input' id='hot' onChange={handleWeatherConditionChange} value='Hot' checked={weather === 'Hot'}/> Hot
+              <input type='radio' name='weather' className='modal__radio-input' id='hot' onChange={handleWeatherConditionChange} value='hot' checked={weather === 'hot'}/> Hot {/*these were uppercase*/}
             </label>
             <label className='modal__label modal__label_type_radio' htmlFor='warm' id='radio-button'>
-              <input type='radio' name='weather' className='modal__radio-input' id='warm' onChange={handleWeatherConditionChange} value='Warm' checked={weather === 'Warm'}/> Warm
+              <input type='radio' name='weather' className='modal__radio-input' id='warm' onChange={handleWeatherConditionChange} value='warm' checked={weather === 'warm'}/> Warm {/*these were uppercase*/}
             </label>
             <label className='modal__label modal__label_type_radio' htmlFor='cold' id='radio-button'>
-              <input type='radio' name='weather' className='modal__radio-input' id='cold' onChange={handleWeatherConditionChange} value="Cold" checked={weather === 'Cold'}/> Cold
-            </label>
+              <input type='radio' name='weather' className='modal__radio-input' id='cold' onChange={handleWeatherConditionChange} value="cold" checked={weather === 'cold'}/> Cold {/*these were uppercase*/}
+            </label> 
           </fieldset>
         </ModalWithForm>
     )

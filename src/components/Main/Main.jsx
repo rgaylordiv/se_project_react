@@ -5,7 +5,7 @@ import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from '../ItemCard/ItemCard'
 import './Main.css'
 
-function Main({ weatherData, handleCardClick, clothingItems }){
+function Main({ weatherData, handleCardClick, clothingItems, onCardLike }){
     const { currentTemperatureUnit } = React.useContext(CurrentTemperatureUnitContext);
 
     return(
@@ -16,11 +16,12 @@ function Main({ weatherData, handleCardClick, clothingItems }){
             </section>
             <ul className='cards__list'>
                 {clothingItems.filter((item) => {
+                        console.log(`Comparing ${item.weather.toLowerCase()} to ${weatherData.type}`);
                     return item.weather.toLowerCase() === weatherData.type;
                 })
                 .map((item) => {
                     return (
-                        <ItemCard key={item._id} item={item} handleCardClick={handleCardClick} clothingItems={clothingItems}/>
+                        <ItemCard key={item._id} item={item} handleCardClick={handleCardClick} clothingItems={clothingItems} onCardLike={onCardLike}/>
                     )
                 })}
             </ul>

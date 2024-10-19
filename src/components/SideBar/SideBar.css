@@ -19,6 +19,7 @@
     height: 56px;
     border-radius: 50%;
     object-fit: cover;
+    border: 1px solid #000;
 }
 
 .sidebar__change-button{

@@ -18,6 +18,8 @@
     border-radius: 10%;
     padding: 0 12px 0 12px;
     margin-top: 15px;
+    margin-right: 28px;
+    text-overflow: ellipsis;
 }
 
 .item-card__image{
@@ -32,5 +34,23 @@
     position: absolute;
     background-image: url('../../assets/likeButton.svg');
     border: none;
-    margin-top: 10px;
+    margin-top: 6px;
+    width: 20px;
+    height: 17px;
+    background-color: transparent;
+    margin-left: 60px;
+}
+
+.item-card__info {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    top: 15px; 
+    left: 0; 
+    right: 0; 
+}
+
+.item-card__button-liked{
+    background-image: url('../../assets/likeButtonActive.svg');
 }

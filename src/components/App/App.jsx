@@ -21,6 +21,7 @@ import { CurrentTemperatureUnitContext } from '../../contexts/CurrentTemperature
 import { CurrentUserContext } from '../../contexts/CurrentUserContext.jsx'
 import { defaultClothingItems } from '../../utils/constants.js';
 import { getItems, addItem, removeItem, addCardLike, removeCardLike } from '../../utils/api.js';
+import { getToken } from '../../utils/token.js';
 import * as api from '../../utils/api.js';
 import * as auth from '../../utils/auth.js';
 import * as token from '../../utils/token.js';
@@ -33,6 +34,8 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({ _id: '', name: '', email: '', avatar: ''});
+  const [isLiked, setIsLiked] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -74,7 +77,7 @@ function App() {
   const handleAddItemSubmit = (item) => {
     addItem(item)
       .then((newItem) => {
-        setClothingItems([newItem, ...clothingItems]);
+        setClothingItems([newItem.data, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
@@ -154,7 +157,8 @@ function App() {
   }
 
   const handleCardLike = ({ id, isLiked }) => {
-    const token = getToken();
+    const token = getToken(); // had as getToken()
+    console.log(`id and isLiked:`, id, isLiked);
     // Check if this card is not currently liked
     !isLiked
       ? // if so, send a request to add the user's id to the card's likes array
@@ -163,8 +167,9 @@ function App() {
           .addCardLike(id, token)
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === id ? updatedCard.item : item))
             );
+            setIsLiked(true);
           })
           .catch((err) => console.log(err))
       : // if not, send a request to remove the user's id from the card's likes array
@@ -173,8 +178,9 @@ function App() {
           .removeCardLike(id, token) 
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === id ? updatedCard : item)) // updatedCard.item does not work
             );
+            setIsLiked(false);
           })
           .catch((err) => console.log(err));
   };

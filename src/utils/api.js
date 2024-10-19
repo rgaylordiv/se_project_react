@@ -19,6 +19,7 @@ function getItems(){
 
 function addItem({name, weather, link}){
     console.log('add items:', name, weather, link);
+    console.log(`fetch token`, token);
     return fetch(`${baseUrl}/items`, {
         method: 'POST',
         headers: {
@@ -28,7 +29,7 @@ function addItem({name, weather, link}){
         body: JSON.stringify({
             name,
             weather,
-            link
+            imageUrl: link
         })
     }).then(checkResponse);
 }

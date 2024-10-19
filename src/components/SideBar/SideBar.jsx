@@ -1,13 +1,12 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect, useState } from "react";
 import './SideBar.css';
 import avatarLogo from '../../assets/avatarLogo.svg'
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
-function SideBar({ handleChangeClick, handleLogOut }){
-
+function SideBar({ handleChangeClick, handleLogOut}){
     const { isLoggedIn, currentUser } = useContext(CurrentUserContext);
     const avatarPlaceholder = currentUser?.username ? currentUser.username.charAt(0).toUpperCase() : '?';
-    
+
     return(
         <div>
             <div className="sidebar">

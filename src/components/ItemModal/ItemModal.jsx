@@ -21,7 +21,7 @@ function ItemModal({ activeModal, selectedCard, closeActiveModal, handleDeleteIt
         <div className={`modal ${activeModal === 'preview' ? 'modal_opened' : ''}`} id='image'>
             <div className='modal__container modal__container_type_image'>
                 <button aria-label='Close' onClick={closeActiveModal} className='modal__close'></button>
-                <img src={selectedCard.link} alt='Image' className='modal__image'/>
+                <img src={selectedCard.imageUrl} alt='Image' className='modal__image'/>
                 <div className='modal__footer'>
                     <div className='modal__delete'>
                         <h2 className='modal__caption'>{selectedCard.name}</h2>

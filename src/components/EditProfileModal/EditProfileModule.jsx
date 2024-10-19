@@ -9,6 +9,7 @@ function EditProfileModule({ isOpen, closeActiveModal, activeModal, handleChange
         name: '',
         avatar: '',
     })
+
     const { currentUser } = useContext(CurrentUserContext);
 
     const handleChanges = (evt) => {
@@ -24,27 +25,15 @@ function EditProfileModule({ isOpen, closeActiveModal, activeModal, handleChange
         handleChange(data);
     }
 
-    const resetForm = () => {
-        setData({
-            name: '',
-            avatar: '',
-        });
-    }
 
     useEffect(() => {
         if(isOpen){
-            resetForm();
-        }
-    }, [isOpen]);
-
-    useEffect(() => {
-        if(currentUser){
             setData({
-                name: currentUser?.name || '',
-                avatar: currentUser?.avatar || '',
-            })
+                name: currentUser.name,
+                avatar: currentUser.avatar,
+            });
         }
-    }, [currentUser]);
+    }, [isOpen, currentUser]);
 
     return(
         <ModalWithForm buttonText='Save changes' title='Change profile data' activeModal={activeModal} closeActiveModal={closeActiveModal} isOpen={isOpen} onSubmit={handleSubmit}>

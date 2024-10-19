@@ -253,7 +253,7 @@ function App() {
           <Header  handleAddClick={handleAddClick} weatherData={weatherData} isLoggedIn={isLoggedIn} handleRegisterClick={handleRegisterClick} handleLoginClick={handleLoginClick} />
           <Routes>
             <Route path='/' element={<Main weatherData={weatherData} handleCardClick={handleCardClick} handleAddItemSubmit={handleAddItemSubmit} clothingItems={clothingItems} onCardLike={handleCardLike}/>}/>
-            <Route path='/profile' element={<ProtectedRoute><Profile isLoggedIn={isLoggedIn} handleCardClick={handleCardClick} clothingItems={clothingItems} handleAddClick={handleAddClick} handleChangeClick={handleChangeClick} handleChange={handleChange} handleLogOut={handleLogOut}/></ProtectedRoute>}/>
+            <Route path='/profile' element={<ProtectedRoute><Profile isLoggedIn={isLoggedIn} handleCardClick={handleCardClick} clothingItems={clothingItems} handleAddClick={handleAddClick} handleChangeClick={handleChangeClick} handleChange={handleChange} handleLogOut={handleLogOut} /></ProtectedRoute>}/>
           </Routes>
           <Footer />
         </div>

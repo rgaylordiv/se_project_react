@@ -9,13 +9,16 @@ function ItemModal({ activeModal, selectedCard, closeActiveModal, handleDeleteIt
          handleDeleteItem(selectedCard._id);
      }
 
-     const { currentUser } = useContext(CurrentUserContext);
+     const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
 
      const isOwn = selectedCard.owner === currentUser._id;
 
      const itemDeleteButtonClassName = (
         `item__delete-button ${isOwn ? 'item__delete-button_visible' : 'item__delete-button_hidden'}`
      )
+
+     console.log("Current User ID:", currentUser._id);
+     console.log("Selected Owner ID:", selectedCard.owner);
 
     return(
         <div className={`modal ${activeModal === 'preview' ? 'modal_opened' : ''}`} id='image'>

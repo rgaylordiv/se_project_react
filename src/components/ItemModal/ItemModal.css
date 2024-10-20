@@ -38,7 +38,7 @@
     justify-content: space-between;
 }
 
-.item__delete-button_visible{
+.item__delete-button{
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -46,6 +46,16 @@
     font-size: 20px;
     line-height: 24px;
     color: #FF4D00;
+}
+
+.item__delete-button_visible{
+    /* border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'CabinetGrotesk-Bold', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FF4D00; */
     visibility: visible;
 }
 

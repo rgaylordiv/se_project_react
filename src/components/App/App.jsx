@@ -126,14 +126,7 @@ function App() {
                 console.log('User logged in');
                 closeActiveModal();
                 navigate('/profile');
-                // const redirectPath = location.state?.from?.pathname || '/';
-                // navigate(redirectPath);
               })
-            // setCurrentUser(data.user);
-            // setIsLoggedIn(true);
-
-            // const redirectPath = location.state?.from?.pathname || '/';
-            // navigate(redirectPath);
           }
         })
         .catch(console.error);
@@ -141,7 +134,7 @@ function App() {
 
   const handleLogOut = () => {
     token.removeToken();
-    // setCurrentUser({ _id: '', name: '', email: '', avatar: '' });
+    setCurrentUser({ _id: '', name: '', email: '', avatar: '' });
     setIsLoggedIn(false);
     navigate('/');
   }

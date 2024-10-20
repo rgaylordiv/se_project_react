@@ -17,8 +17,12 @@ function ItemCard({ item, handleCardClick, onCardLike }){
     const isLiked = item.likes.some(id => id === currentUser._id)
     const isOwn = item.owner === currentUser._id;
     const itemLikeButtonClassName = (
-        `item-card__button ${isLiked ? 'item-card__button-liked' : 'item-card__button'} ${isOwn ? 'item-card__button' : 'item-card__button-hidden'}`
-    )
+        `${isLiked ? 'item-card__button-liked' : 'item-card__button'} ${isOwn ? 'item-card__button' : 'item-card__button-hidden'}`
+    ) // item-card__button was in front of these js functions
+
+    console.log("Current User ID:", currentUser._id);
+    console.log("Item Owner ID:", item.owner);
+    console.log("Item Likes:", item.likes);
 
     // const isOwn = item.owner === currentUser._id;
     // const itemIsOwn = (

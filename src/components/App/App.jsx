@@ -141,6 +141,7 @@ function App() {
 
   const handleLogOut = () => {
     token.removeToken();
+    // setCurrentUser({ _id: '', name: '', email: '', avatar: '' });
     setIsLoggedIn(false);
     navigate('/');
   }

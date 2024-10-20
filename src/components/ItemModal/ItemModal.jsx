@@ -25,13 +25,9 @@ function ItemModal({ activeModal, selectedCard, closeActiveModal, handleDeleteIt
                 <div className='modal__footer'>
                     <div className='modal__delete'>
                         <h2 className='modal__caption'>{selectedCard.name}</h2>
-                        {isOwn ? (
-                            <button className={itemDeleteButtonClassName} type='submit' onClick={() => handleDeleteClick(selectedCard._id)}>
-                                Delete Item
-                            </button>
-                        ) : (
-                            ''
-                        )}
+                        <button className={itemDeleteButtonClassName} type='submit' onClick={() => handleDeleteClick(selectedCard._id)}>
+                            Delete Item
+                        </button>
                     </div>
                     <p className='modal__weather'>Weather: {selectedCard.weather}</p>
                 </div>

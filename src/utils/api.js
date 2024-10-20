@@ -1,8 +1,8 @@
 import { getToken } from "./token";
 
-const token = getToken();
-console.log("getToken:", getToken());
-console.log("Token:", token);
+// const token = getToken();
+// console.log("getToken:", getToken());
+// console.log("Token:", token);
 
 const baseUrl = 'http://localhost:3001';
 
@@ -18,6 +18,7 @@ function getItems(){
 }
 
 function addItem({name, weather, link}){
+    const token = getToken();
     console.log('add items:', name, weather, link);
     console.log(`fetch token`, token);
     return fetch(`${baseUrl}/items`, {
@@ -35,6 +36,7 @@ function addItem({name, weather, link}){
 }
 
 function removeItem(id){
+    const token = getToken();
     return fetch(`${baseUrl}/items/${id}`, {
         method: 'DELETE',
         headers: {
@@ -45,6 +47,7 @@ function removeItem(id){
 }
 
 function addCardLike(id){
+    const token = getToken();
     return fetch(`${baseUrl}/items/${id}/likes`, {
         method: "PUT",
         headers: {
@@ -55,6 +58,7 @@ function addCardLike(id){
 }
 
 function removeCardLike(id){
+    const token = getToken();
     return fetch(`${baseUrl}/items/${id}/likes`, {
         method: "DELETE",
         headers: {

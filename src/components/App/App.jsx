@@ -172,7 +172,7 @@ function App() {
           .removeCardLike(id, token) 
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item)) // updatedCard.item does not work
+              cards.map((item) => (item._id === id ? updatedCard.item : item)) // updatedCard.item didn't work because on backend I didn't have it as an object
             );
             setIsLiked(false);
           })
@@ -247,7 +247,7 @@ function App() {
           <Header  handleAddClick={handleAddClick} weatherData={weatherData} isLoggedIn={isLoggedIn} handleRegisterClick={handleRegisterClick} handleLoginClick={handleLoginClick} />
           <Routes>
             <Route path='/' element={<Main weatherData={weatherData} handleCardClick={handleCardClick} handleAddItemSubmit={handleAddItemSubmit} clothingItems={clothingItems} onCardLike={handleCardLike}/>}/>
-            <Route path='/profile' element={<ProtectedRoute><Profile isLoggedIn={isLoggedIn} handleCardClick={handleCardClick} clothingItems={clothingItems} handleAddClick={handleAddClick} handleChangeClick={handleChangeClick} handleChange={handleChange} handleLogOut={handleLogOut} /></ProtectedRoute>}/>
+            <Route path='/profile' element={<ProtectedRoute><Profile isLoggedIn={isLoggedIn} handleCardClick={handleCardClick} clothingItems={clothingItems} handleAddClick={handleAddClick} handleChangeClick={handleChangeClick} handleChange={handleChange} handleLogOut={handleLogOut} onCardLike={handleCardLike}/></ProtectedRoute>}/>
           </Routes>
           <Footer />
         </div>

@@ -19,7 +19,6 @@ function Header({ handleAddClick, weatherData, isLoggedIn, handleRegisterClick, 
                 <Link to='/'>
                     <img className='header__logo' src={headerLogo} alt="App logo"/>
                 </Link>
-                {/* <img className='header__logo' src={headerLogo} alt="App logo"/> */}
                 <p className="header__date">{currentDate}, {weatherData.city}</p>
             </div>
             <div className='header__nav'>
@@ -51,21 +50,11 @@ function Header({ handleAddClick, weatherData, isLoggedIn, handleRegisterClick, 
                         ) : (
                             <>
                             <li>
-                                {/* <Link to='/signup' className='header__profile-link'>
-                                    <div className='header__nav_user'>
-                                        <p className='header__nav_register'>Sign Up</p>
-                                    </div>
-                                </Link> */}
                                 <div className='header__nav_user'>
                                     <button onClick={handleRegisterClick} className='header__nav_register' type='button'>Sign Up</button>
                                 </div>
                             </li>
                             <li>
-                                {/* <Link to='/signin' className='header__profile-link'>
-                                    <div className='header__nav_user'>
-                                        <p className='header__nav_login'>Log In</p>
-                                    </div>
-                                </Link> */}
                                 <div className='header__profile-link'>
                                     <div className='header__nav_user'>
                                         <button onClick={handleLoginClick} className='header__nav_login' type='button'>Log In</button>
@@ -74,14 +63,6 @@ function Header({ handleAddClick, weatherData, isLoggedIn, handleRegisterClick, 
                             </li>
                         </>
                         )}
-                        {/* <li>
-                            <Link to='/profile' className='header__profile-link'>
-                                <div className='header__nav_user'>
-                                    <p className='header__nav_avatar-name'>Terrence Tegegne</p>
-                                    <img className='header__nav_avatar_logo' src={avatarLogo} alt='Avatar'/>
-                                </div>
-                            </Link>
-                        </li> */}
                     </ul>
                 </nav>
             </div>

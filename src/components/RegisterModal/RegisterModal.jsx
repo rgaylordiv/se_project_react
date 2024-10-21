@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import './RegisterModal.css';
 
-function RegisterModal({ isOpen, closeActiveModal, activeModal, handleRegistration, handleNavigationToLogin }){
+function RegisterModal({ isOpen, closeActiveModal, activeModal, handleRegistration, handleNavigationToLogin, isLoading }){
     const [data, setData] = useState({
         name: '',
         avatar: '',
@@ -64,7 +64,7 @@ function RegisterModal({ isOpen, closeActiveModal, activeModal, handleRegistrati
       }, [isOpen]);
 
     return(
-        <ModalWithForm buttonText='Sign Up' title='Sign Up' activeModal={activeModal} closeActiveModal={closeActiveModal} isOpen={isOpen} onSubmit={handleSubmit}>
+        <ModalWithForm buttonText={isLoading ? 'Signing up...' : 'Sign up'} title='Sign Up' activeModal={activeModal} closeActiveModal={closeActiveModal} isOpen={isOpen} onSubmit={handleSubmit}>
             <label className='modal__form-group' htmlFor='email' id='modal-email'>
                 <span className='modal__form-title'>Email*</span>
                 <input type='text' placeholder='Email' className='modal__form-input' name='email' id='register-email' onChange={handleChange} value={data.email}/>

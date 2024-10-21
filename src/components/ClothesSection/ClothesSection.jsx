@@ -11,13 +11,6 @@ function ClothesSection({ handleCardClick, clothingItems, handleAddClick, onCard
 
     const userClothingItems = clothingItems.filter(item => item.owner === currentUser._id);
     
-    // const isOwn = clothingItems.owner === currentUser._id;
-    // const userClothingItemsClassName = (
-    //     `cards__list ${isOwn ? 'cards__list-visible' : 'cards__list-hidden'}`
-    // )
-
-    // console.log("Current User ID:", currentUser._id);
-    // console.log("Selected Owner ID:", clothingItems.owner);
 
     return(
         <div className="clothes-section">
@@ -25,9 +18,9 @@ function ClothesSection({ handleCardClick, clothingItems, handleAddClick, onCard
                 <p className="clothes-section__title">Your Items</p>
                 <button className="clothes-section__button" onClick={handleAddClick}>+ Add New</button>
             </div>
-            <ul className='cards__list'> {/*this is where userClothingItemsClassName was*/} 
+            <ul className='cards__list'> 
                 {userClothingItems
-                    .map((item) => { //this was clothingItems
+                    .map((item) => {
                     return (
                     <ItemCard 
                         key={item._id} 

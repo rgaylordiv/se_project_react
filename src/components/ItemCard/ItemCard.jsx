@@ -23,11 +23,6 @@ function ItemCard({ item, handleCardClick, onCardLike }){
     console.log("Current User ID:", currentUser._id);
     console.log("Item Owner ID:", item.owner);
     console.log("Item Likes:", item.likes);
-
-    // const isOwn = item.owner === currentUser._id;
-    // const itemIsOwn = (
-    //     `item-card__button ${isOwn ? 'item-card__button-visible' : 'item-card__button-hidden'}`
-    // )
     
     return(
         <div className='item-card'>

@@ -115,3 +115,7 @@ export const coordinates = {
 };
 
 export const APIkey = "1893b951aa1c70d31450ba77f27fb1f9";
+
+export const baseUrl = process.env.NODE_ENV === "production" 
+? "https://api.whatdoiwear.crabdance.com"
+: "http://localhost:3001";

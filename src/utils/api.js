@@ -4,7 +4,7 @@ import { getToken } from "./token";
 // console.log("getToken:", getToken());
 // console.log("Token:", token);
 
-const baseUrl = "http://localhost:3001";
+import { baseUrl } from '../utils/constants';
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);

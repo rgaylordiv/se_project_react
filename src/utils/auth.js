@@ -1,7 +1,7 @@
 import * as token from "../utils/token";
 import { checkResponse } from "./api";
 
-const baseUrl = "http://localhost:3001";
+import { baseUrl } from '../utils/constants';
 
 export const register = ({ email, password, name, avatar }) => {
   const payload = { email, password, name, avatar };
